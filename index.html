@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Concierge SA — Sedick Achmat</title>
+  <title>My Concierge SA - Sedick Achmat</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -33,7 +33,7 @@
       overflow-x: hidden;
     }
 
-    /* ── NAV ─────────────────────────────────────── */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -75,7 +75,7 @@
     }
     .nav-links a:hover { color: var(--gold); }
 
-    /* ── HERO ─────────────────────────────────────── */
+    /* HERO */
     .hero {
       position: relative;
       height: 100vh;
@@ -85,7 +85,6 @@
       overflow: hidden;
     }
 
-    /* Simulated hero using CSS — evokes Table Mountain / Cape Town light */
     .hero-visual {
       position: absolute;
       inset: 0;
@@ -94,7 +93,6 @@
         linear-gradient(160deg, #1a3a5c 0%, #0d1b2a 35%, #1a2e1a 60%, #2a1810 80%, #0d1b2a 100%);
     }
 
-    /* Atmospheric light ray suggesting Table Mountain sunrise */
     .hero-glow {
       position: absolute;
       inset: 0;
@@ -103,7 +101,6 @@
         radial-gradient(ellipse 40% 60% at 20% 80%, rgba(30,70,110,0.3) 0%, transparent 50%);
     }
 
-    /* Diagonal texture lines evoking Cape Dutch gables */
     .hero-texture {
       position: absolute;
       inset: 0;
@@ -186,6 +183,8 @@
       text-transform: uppercase;
       font-weight: 500;
       transition: background 0.3s;
+      border: none;
+      cursor: pointer;
     }
     .btn-primary:hover { background: var(--gold-pale); }
     .btn-outline {
@@ -228,7 +227,7 @@
       animation: scrollPulse 2.2s ease-in-out infinite;
     }
 
-    /* ── VERTICAL RULE ────────────────────────────── */
+    /* VERTICAL RULE */
     .page-rule-wrap {
       position: fixed;
       left: 2.2rem;
@@ -247,7 +246,7 @@
       opacity: 0.35;
     }
 
-    /* ── UTILITY ──────────────────────────────────── */
+    /* UTILITY */
     .container {
       max-width: 1140px;
       margin: 0 auto;
@@ -278,7 +277,7 @@
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── MEET SEDICK ──────────────────────────────── */
+    /* MEET SEDICK */
     .meet {
       background: var(--navy);
       padding: 8rem 0;
@@ -302,7 +301,7 @@
       align-items: start;
     }
 
-    /* Portrait placeholder — elegant frame */
+    /* Portrait placeholder */
     .portrait-frame {
       position: relative;
     }
@@ -351,7 +350,7 @@
       margin-top: 0.2rem;
     }
 
-    /* Gold Keys badge */
+    /* Credential Badge */
     .credential-badge {
       position: absolute;
       bottom: -1.5rem;
@@ -431,7 +430,7 @@
       line-height: 1.5;
     }
 
-    /* ── CAPE TOWN EXPERIENCES ────────────────────── */
+    /* CAPE TOWN EXPERIENCES */
     .experiences {
       background: var(--dark);
       padding: 8rem 0;
@@ -459,7 +458,7 @@
       align-self: end;
     }
 
-    /* ── PHOTO EXPERIENCE CARDS ─────────────────── */
+    /* PHOTO EXPERIENCE CARDS */
     .exp-mosaic {
       display: grid;
       grid-template-columns: 1.15fr 1fr 1fr;
@@ -484,25 +483,9 @@
     }
     .exp-tile:hover .exp-photo { transform: scale(1.06); }
 
-    /* Gradient overlay — dark at bottom for text legibility */
+    /* Gradient overlay */
     .exp-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(5,10,18,0.92) 0%,
-        rgba(5,10,18,0.45) 45%,
-        rgba(5,10,18,0.1) 100%
-      );
-      transition: background 0.4s;
-    }
-    .exp-tile:hover .exp-overlay {
-      background: linear-gradient(
-        to top,
-        rgba(5,10,18,0.96) 0%,
-        rgba(5,10,18,0.55) 50%,
-        rgba(5,10,18,0.15) 100%
-      );
+      display: none;
     }
 
     /* Gold top-left number */
@@ -573,7 +556,7 @@
     }
     .exp-tile:hover::after { width: 100%; }
 
-    /* ── FULL SERVICES ────────────────────────────── */
+    /* FULL SERVICES */
     .services {
       background: var(--navy);
       padding: 8rem 0;
@@ -632,14 +615,14 @@
       line-height: 1.4;
     }
     .service-list li::before {
-      content: '—';
+      content: '-';
       color: rgba(200,169,110,0.4);
       font-size: 0.7rem;
       flex-shrink: 0;
     }
     .service-list li:last-child { border-bottom: none; }
 
-    /* ── PHILOSOPHY ───────────────────────────────── */
+    /* PHILOSOPHY */
     .philosophy {
       background: var(--dark);
       padding: 8rem 0;
@@ -689,7 +672,7 @@
       opacity: 0.4;
     }
 
-    /* ── PILLARS ──────────────────────────────────── */
+    /* PILLARS */
     .pillars {
       background: var(--navy);
       padding: 7rem 0;
@@ -727,7 +710,7 @@
       line-height: 1.65;
     }
 
-    /* ── CONTACT ──────────────────────────────────── */
+    /* CONTACT */
     .contact {
       background: var(--dark);
       padding: 8rem 0;
@@ -857,7 +840,7 @@
       color: var(--slate);
     }
 
-    /* ── FOOTER ───────────────────────────────────── */
+    /* FOOTER */
     footer {
       background: var(--navy);
       border-top: 1px solid rgba(200,169,110,0.1);
@@ -890,7 +873,7 @@
       color: var(--slate);
     }
 
-    /* ── KEYFRAMES ────────────────────────────────── */
+    /* KEYFRAMES */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -900,7 +883,7 @@
       50%       { opacity: 1; transform: scaleY(1); }
     }
 
-    /* ── MOBILE ───────────────────────────────────── */
+    /* MOBILE */
     @media (max-width: 960px) {
       nav { padding: 1.2rem 2rem; }
       .nav-links { display: none; }
@@ -933,12 +916,10 @@
 </head>
 <body>
 
-  <!-- Signature vertical gold rule -->
   <div class="page-rule-wrap" aria-hidden="true">
     <div class="page-rule" id="pageRule"></div>
   </div>
 
-  <!-- Navigation -->
   <nav id="nav">
     <a href="#" class="nav-logo">My Concierge SA</a>
     <ul class="nav-links">
@@ -949,13 +930,12 @@
     </ul>
   </nav>
 
-  <!-- ── HERO ── -->
   <section class="hero" aria-label="Welcome to My Concierge SA">
     <div class="hero-visual" aria-hidden="true"></div>
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="hero-texture" aria-hidden="true"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Cape Town · South Africa</p>
+      <p class="hero-eyebrow">Cape Town - South Africa</p>
       <h1 class="hero-title">
         Your Personal<br>
         <em>Concierge,</em>
@@ -975,7 +955,6 @@
     </div>
   </section>
 
-  <!-- ── MEET SEDICK ── -->
   <section class="meet" id="meet">
     <div class="container">
       <div class="meet-grid">
@@ -985,7 +964,7 @@
               <div class="portrait-monogram" aria-hidden="true">SA</div>
             </div>
             <div class="credential-badge" aria-label="35 years in hospitality">
-              <span class="badge-icon" aria-hidden="true">⭐</span>
+              <span class="badge-icon" aria-hidden="true">*</span>
               <span class="badge-text">Five-Star Hospitality</span>
             </div>
           </div>
@@ -998,9 +977,9 @@
         <div class="reveal">
           <p class="section-label">About</p>
           <h2>A career built on <em>exceptional service</em></h2>
-          <p>My name is Sedick Achmat, and hospitality has been my passion and profession for more than 35 years. I have had the privilege of serving guests in some of the finest five-star hotels, where I learned that true concierge service is about much more than providing information—it's about creating exceptional experiences, solving problems, and making life easier for people.</p>
+          <p>My name is Sedick Achmat, and hospitality has been my passion and profession for more than 35 years. I have had the privilege of serving guests in some of the finest five-star hotels, where I learned that true concierge service is about much more than providing information - it's about creating exceptional experiences, solving problems, and making life easier for people.</p>
           <p>Over the years I have assisted countless guests from around the world with everything from travel arrangements and exclusive reservations to personalised recommendations and bespoke requests. These experiences gave me a deep understanding of what clients value most: reliability, discretion, attention to detail, and genuine care.</p>
-          <p>Today I bring that same standard to My Concierge SA — a service designed to save you time, reduce stress, and help you enjoy life's opportunities with confidence and convenience.</p>
+          <p>Today I bring that same standard to My Concierge SA - a service designed to save you time, reduce stress, and help you enjoy life's opportunities with confidence and convenience.</p>
 
           <div class="stat-row">
             <div class="stat-item">
@@ -1008,7 +987,7 @@
               <div class="lbl">Years in<br>Hospitality</div>
             </div>
             <div class="stat-item">
-              <div class="num">5★</div>
+              <div class="num">5*</div>
               <div class="lbl">Hotel<br>Experience</div>
             </div>
             <div class="stat-item">
@@ -1021,7 +1000,6 @@
     </div>
   </section>
 
-  <!-- ── CAPE TOWN EXPERIENCES ── -->
   <section class="experiences" id="experiences">
     <div class="container">
       <div class="exp-header reveal">
@@ -1033,72 +1011,54 @@
       </div>
 
       <div class="exp-mosaic">
-
-        <!-- 01 Winelands — tall left card -->
         <div class="exp-tile tall reveal">
-          <div class="exp-photo" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJza3lfdyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzYTVhN2MiLz48c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzZiOGZhOCIvPjxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjYzk5NTZhIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOGI1ZTNjIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImhpbGwxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJkNWEyNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhM2ExOCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJoaWxsMiIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzZDdhMzUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyYTUyMjQiLz48L2xpbmVhckdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvd193IiBjeD0iNjAlIiBjeT0iMzUlIiByPSI0MCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlOGEwNTAiIHN0b3Atb3BhY2l0eT0iMC41Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJ0cmFuc3BhcmVudCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjQwIiBmaWxsPSJ1cmwoI3NreV93KSIvPjxlbGxpcHNlIGN4PSI0ODAiIGN5PSIyMDAiIHJ4PSIxNjAiIHJ5PSIxMDAiIGZpbGw9InVybCgjZ2xvd193KSIvPjxjaXJjbGUgY3g9IjQ4MCIgY3k9IjE5NSIgcj0iMjgiIGZpbGw9IiNmNWM5N2EiIG9wYWNpdHk9IjAuOSIvPjxwYXRoIGQ9Ik0wLDMyMCBRMTAwLDIyMCAyMDAsMjYwIFEzMDAsMTkwIDQwMCwyNDAgUTUwMCwxNzAgNjAwLDIyMCBRNzAwLDE4MCA4MDAsMjMwIEw4MDAsNDAwIEwwLDQwMFoiIGZpbGw9IiMxZTNhMWEiIG9wYWNpdHk9IjAuNiIvPjxwYXRoIGQ9Ik0wLDM0MCBRMTUwLDI1MCAyODAsMjkwIFEzODAsMjIwIDUwMCwyNjUgUTYyMCwyMDAgODAwLDI1MCBMODAwLDQyMCBMMCw0MjBaIiBmaWxsPSIjMmE1MjIyIiBvcGFjaXR5PSIwLjciLz48cGF0aCBkPSJNMCw0MDAgUTIwMCwzNDAgNDAwLDM3MCBRNjAwLDMzMCA4MDAsMzYwIEw4MDAsNjQwIEwwLDY0MFoiIGZpbGw9InVybCgjaGlsbDEpIi8+PHBhdGggZD0iTTAsNDQwIFExNTAsMzkwIDMyMCw0MjAgUTUwMCwzODAgNzAwLDQxMCBMODAwLDQwMCBMODAwLDY0MCBMMCw2NDBaIiBmaWxsPSJ1cmwoI2hpbGwyKSIvPjxnIG9wYWNpdHk9IjAuODUiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFhMmUxNiIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNMCw0OTAgUTQwMCw0NzUgODAwLDQ5MCIvPjxwYXRoIGQ9Ik0wLDUxMCBRNDAwLDQ5NSA4MDAsNTEwIi8+PHBhdGggZD0iTTAsNTMwIFE0MDAsNTE1IDgwMCw1MzAiLz48cGF0aCBkPSJNMCw1NTAgUTQwMCw1MzUgODAwLDU1MCIvPjxwYXRoIGQ9Ik0wLDU3MCBRNDAwLDU1NSA4MDAsNTcwIi8+PC9nPjxnIHN0cm9rZT0iIzVhNDAyMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiPjxsaW5lIHgxPSI4MCIgeTE9IjQ4MCIgeDI9IjgwIiB5Mj0iNjAwIi8+PGxpbmUgeDE9IjIwMCIgeTE9IjQ3OCIgeDI9IjIwMCIgeTI9IjU5OCIvPjxsaW5lIHgxPSIzMjAiIHkxPSI0NzYiIHgyPSIzMjAiIHkyPSI1OTYiLz48bGluZSB4MT0iNDQwIiB5MT0iNDc2IiB4Mj0iNDQwIiB5Mj0iNTk2Ii8+PGxpbmUgeDE9IjU2MCIgeTE9IjQ3OCIgeDI9IjU2MCIgeTI9IjU5OCIvPjxsaW5lIHgxPSI2ODAiIHkxPSI0NzkiIHgyPSI2ODAiIHkyPSI1OTkiLz48L2c+PGcgZmlsbD0iIzJkNmIyNSIgb3BhY2l0eT0iMC43Ij48Y2lyY2xlIGN4PSI4MCIgY3k9IjQ5MCIgcj0iOCIvPjxjaXJjbGUgY3g9IjgwIiBjeT0iNTEwIiByPSI3Ii8+PGNpcmNsZSBjeD0iODAiIGN5PSI1MzAiIHI9IjgiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSI0ODgiIHI9IjgiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSI1MDgiIHI9IjciLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSI1MjgiIHI9IjgiLz48Y2lyY2xlIGN4PSIzMjAiIGN5PSI0ODYiIHI9IjgiLz48Y2lyY2xlIGN4PSIzMjAiIGN5PSI1MDYiIHI9IjciLz48Y2lyY2xlIGN4PSIzMjAiIGN5PSI1MjYiIHI9IjgiLz48Y2lyY2xlIGN4PSI0NDAiIGN5PSI0ODYiIHI9IjgiLz48Y2lyY2xlIGN4PSI0NDAiIGN5PSI1MDYiIHI9IjciLz48Y2lyY2xlIGN4PSI0NDAiIGN5PSI1MjYiIHI9IjgiLz48Y2lyY2xlIGN4PSI1NjAiIGN5PSI0ODgiIHI9IjgiLz48Y2lyY2xlIGN4PSI1NjAiIGN5PSI1MDgiIHI9IjciLz48Y2lyY2xlIGN4PSI1NjAiIGN5PSI1MjgiIHI9IjgiLz48Y2lyY2xlIGN4PSI2ODAiIGN5PSI0ODkiIHI9IjgiLz48Y2lyY2xlIGN4PSI2ODAiIGN5PSI1MDkiIHI9IjciLz48Y2lyY2xlIGN4PSI2ODAiIGN5PSI1MjkiIHI9IjgiLz48L2c+PC9nPjxyZWN0IHg9IjMxMCIgeT0iMzU1IiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjU1IiBmaWxsPSIjZDRiODk2Ii8+PHBvbHlnb24gcG9pbnRzPSIyOTAsMzU1IDQ1MCwzNTUgNDIwLDMyMCAzMjAsMzIwIiBmaWxsPSIjYjg5NzdhIi8+PHJlY3QgeD0iMzUwIiB5PSIzODAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0iIzZiNGEyYSIvPjxyZWN0IHg9IjMyMCIgeT0iMzY1IiB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIGZpbGw9IiM4YjllYjMiLz48cmVjdCB4PSI0MDAiIHk9IjM2NSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjOGI5ZWIzIi8+PGVsbGlwc2UgY3g9IjI5NSIgY3k9IjM1MCIgcng9IjE4IiByeT0iMjgiIGZpbGw9IiMyYTVhMjIiLz48ZWxsaXBzZSBjeD0iNDU1IiBjeT0iMzUyIiByeD0iMTYiIHJ5PSIyNiIgZmlsbD0iIzJkNjMyNSIvPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjQwIiBmaWxsPSJyZ2JhKDE4MCwxMjAsNjAsMC4wOCkiLz48L3N2Zz4=')""></div>
+          <div class="exp-photo" style="background-image: url('https://unsplash.com/photos/O8OJaw5Ecc0/download?force=true');"></div>
           <div class="exp-overlay"></div>
           <div class="exp-tile-num">01</div>
           <div class="exp-tile-content">
-            <span class="exp-tile-icon" aria-hidden="true">🍷</span>
             <h3>Winelands &amp; Private Cellars</h3>
-            <p>Private tastings in Franschhoek, Stellenbosch, and Constantia — including estates not open to the public. Chauffeured, curated, and paired with world-class cuisine.</p>
+            <p>Exclusive tastings at legendary estates, behind-the-scenes cellar access, and bespoke blending sessions. I arrange direct relationships with winemakers and reserve the finest vintages before release.</p>
           </div>
         </div>
-
-        <!-- 02 Ocean — top right -->
         <div class="exp-tile reveal">
-          <div class="exp-photo" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJza3lfbyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwYTFmNDAiLz48c3RvcCBvZmZzZXQ9IjM1JSIgc3RvcC1jb2xvcj0iIzFhNGE3YSIvPjxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjZTg4MDNhIi8+PHN0b3Agb2Zmc2V0PSI4MCUiIHN0b3AtY29sb3I9IiNjMDUwM2EiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4YTJhMmEiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0ic2VhIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhM2E2YSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMGQyNTQ4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxODI4Ii8+PC9saW5lYXJHcmFkaWVudD48cmFkaWFsR3JhZGllbnQgaWQ9InN1bnNldF9vIiBjeD0iNTAlIiBjeT0iNTUlIiByPSI0NSUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZjgwNDAiIHN0b3Atb3BhY2l0eT0iMC43Ii8+PHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNjMDQwMjAiIHN0b3Atb3BhY2l0eT0iMC4zIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJ0cmFuc3BhcmVudCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjQwIiBmaWxsPSJ1cmwoI3NreV9vKSIvPjxlbGxpcHNlIGN4PSI0MDAiIGN5PSIzNDAiIHJ4PSIzMDAiIHJ5PSIxODAiIGZpbGw9InVybCgjc3Vuc2V0X28pIi8+PGVsbGlwc2UgY3g9IjE1MCIgY3k9IjE0MCIgcng9IjkwIiByeT0iMzAiIGZpbGw9InJnYmEoMjU1LDE2MCw4MCwwLjI1KSIvPjxlbGxpcHNlIGN4PSI2NTAiIGN5PSIxMTAiIHJ4PSIxMTAiIHJ5PSIyNSIgZmlsbD0icmdiYSgyNTUsMTQwLDYwLDAuMikiLz48ZWxsaXBzZSBjeD0iNDAwIiBjeT0iMzQwIiByeD0iMzUiIHJ5PSIxMiIgZmlsbD0iI2ZmOTA0MCIgb3BhY2l0eT0iMC45Ii8+PHBhdGggZD0iTTM2MCwzNDUgUTQwMCwzNDAgNDQwLDM0NSBRNDEwLDY0MCAzOTAsNjQwWiIgZmlsbD0icmdiYSgyNTUsMTQwLDYwLDAuMykiLz48cmVjdCB5PSIzNDAiIHdpZHRoPSI4MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI3NlYSkiLz48ZyBzdHJva2U9InJnYmEoMTAwLDE2MCwyMjAsMC4zKSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMCwzNzAgUTEwMCwzNjIgMjAwLDM3MCBRMzAwLDM3OCA0MDAsMzcwIFE1MDAsMzYyIDYwMCwzNzAgUTcwMCwzNzggODAwLDM3MCIvPjxwYXRoIGQ9Ik0wLDQwMCBRMTAwLDM5MyAyMDAsNDAwIFEzMDAsNDA3IDQwMCw0MDAgUTUwMCwzOTMgNjAwLDQwMCBRNzAwLDQwNyA4MDAsNDAwIi8+PHBhdGggZD0iTTAsNDM1IFExMDAsNDI4IDIwMCw0MzUgUTMwMCw0NDIgNDAwLDQzNSBRNTAwLDQyOCA2MDAsNDM1IFE3MDAsNDQyIDgwMCw0MzUiLz48L2c+PHBhdGggZD0iTTMyMCwzNDAgUTQwMCwzNDUgNDgwLDM0MCBMNDcwLDM3MCBRNDAwLDM3OCAzMzAsMzcwWiIgZmlsbD0iI2U4ZTBkMCIvPjxwYXRoIGQ9Ik0zMzAsMzcwIFE0MDAsMzc4IDQ3MCwzNzAgUTQzMCwzOTAgMzcwLDM5MFoiIGZpbGw9IiNjOGJhYTgiLz48bGluZSB4MT0iNDAwIiB5MT0iMjAwIiB4Mj0iNDAwIiB5Mj0iMzQyIiBzdHJva2U9IiNkMGM4YjgiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHBhdGggZD0iTTQwMCwyMTAgTDQwMCwzMzggTDM0MCwzNDVaIiBmaWxsPSJyZ2JhKDI0MCwyMzUsMjIwLDAuOSkiLz48cGF0aCBkPSJNNDAwLDI1MCBMNDAwLDMzOCBMNDYwLDM0MFoiIGZpbGw9InJnYmEoMjQwLDIzNSwyMjAsMC43NSkiLz48cGF0aCBkPSJNMCwzMTAgTDYwLDI2MCBMMTAwLDI1MCBMMTUwLDI1NSBMMTgwLDIwMCBMMjIwLDIwMCBMMjYwLDIwNSBMMjkwLDI1MCBMMzUwLDI0OCBMMzgwLDMyMCBMMCwzMjBaIiBmaWxsPSIjMGExZTM1IiBvcGFjaXR5PSIwLjg1Ii8+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2NDAiIGZpbGw9InJnYmEoMjAsNDAsODAsMC4xNSkiLz48L3N2Zz4='); background-position: center 40%;"></div>
+          <div class="exp-photo" style="background-image: url('https://unsplash.com/photos/o9oQaOGpLz0/download?force=true');"></div>
           <div class="exp-overlay"></div>
           <div class="exp-tile-num">02</div>
           <div class="exp-tile-content">
-            <span class="exp-tile-icon" aria-hidden="true">⛵</span>
             <h3>Ocean &amp; Marine Experiences</h3>
-            <p>Private yacht charters, sunset cruises on the Atlantic, whale watching from Hermanus, and cage diving with great whites.</p>
+            <p>Private yacht charters, exclusive diving sites, and world-class fishing expeditions around the Cape.</p>
           </div>
         </div>
-
-        <!-- 03 Helicopter — top far right -->
         <div class="exp-tile reveal">
-          <div class="exp-photo" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJza3lfaCIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwZDJhNTIiLz48c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzFlNWE4YSIvPjxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjM2E4YWI4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNWFhYWQ4Ii8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9InNlYV9oIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhNWE4YSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBhMmE0YSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJsYW5kX2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNGE3YTNhIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMmE0YTIyIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2NDAiIGZpbGw9InVybCgjc2t5X2gpIi8+PGVsbGlwc2UgY3g9IjEyMCIgY3k9IjQ4MCIgcng9IjEwMCIgcnk9IjI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNzUpIi8+PGVsbGlwc2UgY3g9IjkwIiBjeT0iNDc1IiByeD0iNzAiIHJ5PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjg1KSIvPjxlbGxpcHNlIGN4PSI2ODAiIGN5PSI1MjAiIHJ4PSIxMjAiIHJ5PSIzMiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjcpIi8+PGVsbGlwc2UgY3g9IjcwMCIgY3k9IjUxNSIgcng9IjkwIiByeT0iMjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC44KSIvPjxlbGxpcHNlIGN4PSIzNTAiIGN5PSI1NjAiIHJ4PSI4MCIgcnk9IjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNjUpIi8+PHBhdGggZD0iTTAsMzUwIFEyMDAsMzMwIDQwMCwzNjAgUTYwMCwzNDAgODAwLDM1NSBMODAwLDY0MCBMMCw2NDBaIiBmaWxsPSJ1cmwoI3NlYV9oKSIvPjxnIHN0cm9rZT0icmdiYSgxODAsMjIwLDI1NSwwLjIpIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPjxwYXRoIGQ9Ik0wLDM4MCBRMjAwLDM3MCA0MDAsMzg1IFE2MDAsMzcwIDgwMCwzODAiLz48cGF0aCBkPSJNMCw0MjAgUTIwMCw0MTAgNDAwLDQyNSBRNjAwLDQxMCA4MDAsNDIwIi8+PC9nPjxwYXRoIGQ9Ik0wLDQwMCBRNTAsMzcwIDEyMCwzODAgUTE4MCwzNjAgMjQwLDM4MCBRMjgwLDM1MCAzMzAsMzcwIFEzNjAsMzQwIDQwMCwzNjAgTDQwMCw2NDAgTDAsNjQwWiIgZmlsbD0idXJsKCNsYW5kX2gpIiBvcGFjaXR5PSIwLjkiLz48cGF0aCBkPSJNODAsMzQwIEwxMDAsMzEwIEwxNTAsMzA1IEwyMDAsMzEwIEwyNDAsMzA1IEwyODAsMzA4IEwzMTAsMzQwWiIgZmlsbD0iIzNhNWEyYSIvPjxyZWN0IHg9IjEwMCIgeT0iMzA1IiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjgiIGZpbGw9IiM0YTZhM2EiLz48ZyBmaWxsPSJyZ2JhKDIwMCwxODAsMTQwLDAuNSkiPjxyZWN0IHg9IjIwMCIgeT0iMzcwIiB3aWR0aD0iMTIiIGhlaWdodD0iMTgiLz48cmVjdCB4PSIyMTUiIHk9IjM2NSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjIyIi8+PHJlY3QgeD0iMjI4IiB5PSIzNzIiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNSIvPjxyZWN0IHg9IjI0NSIgeT0iMzYwIiB3aWR0aD0iMTAiIGhlaWdodD0iMjUiLz48cmVjdCB4PSIyNTgiIHk9IjM2OCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjE4Ii8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU0MCwxODApIHJvdGF0ZSgtNSkiPjxlbGxpcHNlIGN4PSIwIiBjeT0iMCIgcng9IjQ1IiByeT0iMTIiIGZpbGw9IiNlOGUwZDAiLz48cmVjdCB4PSItOCIgeT0iLTIwIiB3aWR0aD0iMTYiIGhlaWdodD0iMjAiIGZpbGw9IiNkMGM4YjgiIHJ4PSIyIi8+PGxpbmUgeDE9Ii01NSIgeTE9Ii0yIiB4Mj0iNTUiIHkyPSItMiIgc3Ryb2tlPSIjYjBhODk4IiBzdHJva2Utd2lkdGg9IjIiLz48ZWxsaXBzZSBjeD0iMCIgY3k9Ii0yMCIgcng9IjUwIiByeT0iNCIgZmlsbD0icmdiYSgyMDAsMTkwLDE3NSwwLjM1KSIvPjwvZz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjY0MCIgZmlsbD0icmdiYSgzMCw3MCwxMjAsMC4xKSIvPjwvc3ZnPg=='); background-position: center 60%;"></div>
+          <div class="exp-photo" style="background-image: url('https://unsplash.com/photos/W41xnl_arhE/download?w=800&q=80');"></div>
           <div class="exp-overlay"></div>
           <div class="exp-tile-num">03</div>
           <div class="exp-tile-content">
-            <span class="exp-tile-icon" aria-hidden="true">🚁</span>
             <h3>Helicopter &amp; Air Charters</h3>
-            <p>Scenic flights over the Peninsula, Table Mountain, and the Winelands. Private air travel to safari lodges and remote escapes.</p>
+            <p>Scenic flights over Cape Town, private helicopter charters to remote locations, and luxury jet access.</p>
           </div>
         </div>
-
-        <!-- 04 Safari — bottom middle -->
         <div class="exp-tile reveal">
-          <div class="exp-photo" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJza3lfcyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM1YTNhMTAiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0iI2MwNjAyMCIvPjxzdG9wIG9mZnNldD0iNTUlIiBzdG9wLWNvbG9yPSIjZTg4MDMwIi8+PHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiNmMGEwNTAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjODcwMzAiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JvdW5kIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhhNmEzMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVhNDAyMCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJnbG93X3MiIGN4PSIzMCUiIGN5PSI2MCUiIHI9IjQwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsMTYwLDQwLDAuNSkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9InRyYW5zcGFyZW50Ii8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2NDAiIGZpbGw9InVybCgjc2t5X3MpIi8+PGNpcmNsZSBjeD0iMjIwIiBjeT0iMzAwIiByPSI1MCIgZmlsbD0iI2ZmYTAyMCIgb3BhY2l0eT0iMC45Ii8+PGNpcmNsZSBjeD0iMjIwIiBjeT0iMzAwIiByPSIzOCIgZmlsbD0iI2ZmZDA2MCIvPjxlbGxpcHNlIGN4PSIyMjAiIGN5PSIzMjAiIHJ4PSIyMDAiIHJ5PSIxMjAiIGZpbGw9InVybCgjZ2xvd19zKSIvPjxwYXRoIGQ9Ik0wLDMxMCBRMTAwLDI3MCAyMDAsMjg1IFEzMDAsMjYwIDQwMCwyODAgUTUwMCwyNjUgNjAwLDI3OCBRNzAwLDI1OCA4MDAsMjc1IEw4MDAsMzgwIEwwLDM4MFoiIGZpbGw9IiMzYTJhMTAiIG9wYWNpdHk9IjAuNyIvPjxwYXRoIGQ9Ik0wLDM0MCBRMTUwLDI5NSAzMDAsMzE1IFE0NTAsMjg1IDYwMCwzMTAgUTcwMCwyOTAgODAwLDMwNSBMODAwLDQwMCBMMCw0MDBaIiBmaWxsPSIjNGEzODE4IiBvcGFjaXR5PSIwLjgiLz48cmVjdCB5PSI0MDAiIHdpZHRoPSI4MDAiIGhlaWdodD0iMjQwIiBmaWxsPSJ1cmwoI2dyb3VuZCkiLz48bGluZSB4MT0iMTMwIiB5MT0iNDAwIiB4Mj0iMTMwIiB5Mj0iMjkwIiBzdHJva2U9IiM0YTMwMTAiIHN0cm9rZS13aWR0aD0iNiIvPjxsaW5lIHgxPSIxMzAiIHkxPSIzMjAiIHgyPSI5MCIgeTI9IjI5NSIgc3Ryb2tlPSIjNWEzODE4IiBzdHJva2Utd2lkdGg9IjMiLz48bGluZSB4MT0iMTMwIiB5MT0iMzA1IiB4Mj0iMTcwIiB5Mj0iMjg1IiBzdHJva2U9IiM1YTM4MTgiIHN0cm9rZS13aWR0aD0iMyIvPjxlbGxpcHNlIGN4PSIxMTAiIGN5PSIyODAiIHJ4PSI1MCIgcnk9IjE4IiBmaWxsPSIjMmE1YTE4Ii8+PGVsbGlwc2UgY3g9IjE2MCIgY3k9IjI3MiIgcng9IjU1IiByeT0iMTYiIGZpbGw9IiMyZDYzMjAiLz48ZWxsaXBzZSBjeD0iMTMwIiBjeT0iMjY4IiByeD0iNjUiIHJ5PSIyMCIgZmlsbD0iIzM1ODUyNSIvPjxsaW5lIHgxPSI2NTAiIHkxPSI0MDAiIHgyPSI2NTAiIHkyPSIzMTAiIHN0cm9rZT0iIzRhMzAxMCIgc3Ryb2tlLXdpZHRoPSI1Ii8+PGxpbmUgeDE9IjY1MCIgeTE9IjM0MCIgeDI9IjYxMCIgeTI9IjMxOCIgc3Ryb2tlPSIjNWEzODE4IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxsaW5lIHgxPSI2NTAiIHkxPSIzMjgiIHgyPSI2ODgiIHkyPSIzMDgiIHN0cm9rZT0iIzVhMzgxOCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48ZWxsaXBzZSBjeD0iNjI1IiBjeT0iMzAwIiByeD0iNDUiIHJ5PSIxNSIgZmlsbD0iIzJhNWExOCIvPjxlbGxpcHNlIGN4PSI2NzAiIGN5PSIyOTUiIHJ4PSI0OCIgcnk9IjE1IiBmaWxsPSIjMmQ2MzIwIi8+PGVsbGlwc2UgY3g9IjY1MCIgY3k9IjI4OCIgcng9IjU4IiByeT0iMTgiIGZpbGw9IiMzNTg1MjUiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzODAsMzk1KSI+PGVsbGlwc2UgY3g9IjAiIGN5PSIwIiByeD0iNTUiIHJ5PSIyOCIgZmlsbD0iIzFhMTAwOCIvPjxjaXJjbGUgY3g9IjUyIiBjeT0iLTgiIHI9IjI4IiBmaWxsPSIjMTQwYzA1Ii8+PGNpcmNsZSBjeD0iNTIiIGN5PSItOCIgcj0iMzYiIGZpbGw9IiMwYTA2MDIiIG9wYWNpdHk9IjAuNyIvPjxwb2x5Z29uIHBvaW50cz0iNjQsLTM4IDcwLC0yMiA1OCwtMjgiIGZpbGw9IiMxYTBlMDYiLz48Y2lyY2xlIGN4PSI2MyIgY3k9Ii0xMiIgcj0iNCIgZmlsbD0iI2M4YTAzMCIvPjxjaXJjbGUgY3g9IjYzIiBjeT0iLTEyIiByPSIyIiBmaWxsPSIjMGEwNjAyIi8+PHBhdGggZD0iTS01MCw1IFEtNzAsMCAtNzUsLTE1IFEtNzgsLTI1IC03MiwtMjgiIHN0cm9rZT0iIzFhMTAwOCIgc3Ryb2tlLXdpZHRoPSI1IiBmaWxsPSJub25lIi8+PHJlY3QgeD0iLTMwIiB5PSIxOCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjI1IiBmaWxsPSIjMTQwYzA1IiByeD0iNCIvPjxyZWN0IHg9Ii0xMCIgeT0iMTgiIHdpZHRoPSIxMiIgaGVpZ2h0PSIyNSIgZmlsbD0iIzE0MGMwNSIgcng9IjQiLz48cmVjdCB4PSIyMCIgeT0iMTgiIHdpZHRoPSIxMiIgaGVpZ2h0PSIyNSIgZmlsbD0iIzE0MGMwNSIgcng9IjQiLz48cmVjdCB4PSIzOCIgeT0iMTgiIHdpZHRoPSIxMiIgaGVpZ2h0PSIyNSIgZmlsbD0iIzE0MGMwNSIgcng9IjQiLz48L2c+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2NDAiIGZpbGw9InJnYmEoMTYwLDEwMCwyMCwwLjEyKSIvPjwvc3ZnPg=='); background-position: center 35%;"></div>
+          <div class="exp-photo" style="background-image: url('https://unsplash.com/photos/RtZUgho6x-s/download?w=800&q=80');"></div>
           <div class="exp-overlay"></div>
           <div class="exp-tile-num">04</div>
           <div class="exp-tile-content">
-            <span class="exp-tile-icon" aria-hidden="true">🦁</span>
             <h3>Safari &amp; Wildlife</h3>
-            <p>Bespoke Big Five experiences — from the Kruger to exclusive private reserves. Every transfer and lodge personally arranged.</p>
+            <p>Bespoke Big Five experiences from the Kruger to exclusive private reserves. Every transfer and lodge personally arranged.</p>
           </div>
         </div>
-
-        <!-- 05 City — bottom far right -->
         <div class="exp-tile reveal">
-          <div class="exp-photo" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJza3lfYyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwNTBkMWEiLz48c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzBhMWYzYSIvPjxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjMTAyODQ4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMWEzODYwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IndhdGVyX2MiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyYTUwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxODI4Ii8+PC9saW5lYXJHcmFkaWVudD48cmFkaWFsR3JhZGllbnQgaWQ9ImxpZ2h0X2MiIGN4PSI1MCUiIGN5PSI3MCUiIHI9IjYwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsMjAwLDEwMCwwLjIpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJ0cmFuc3BhcmVudCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjQwIiBmaWxsPSJ1cmwoI3NreV9jKSIvPjxnIGZpbGw9IndoaXRlIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjMwIiByPSIxIi8+PGNpcmNsZSBjeD0iMTIwIiBjeT0iMTUiIHI9IjEuNSIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjQwIiByPSIxIi8+PGNpcmNsZSBjeD0iMjgwIiBjeT0iMjAiIHI9IjEiLz48Y2lyY2xlIGN4PSIzNTAiIGN5PSIxMCIgcj0iMS41Ii8+PGNpcmNsZSBjeD0iNDIwIiBjeT0iMzUiIHI9IjEiLz48Y2lyY2xlIGN4PSI0OTAiIGN5PSIxOCIgcj0iMSIvPjxjaXJjbGUgY3g9IjU2MCIgY3k9IjI4IiByPSIxLjUiLz48Y2lyY2xlIGN4PSI2MzAiIGN5PSIxMiIgcj0iMSIvPjxjaXJjbGUgY3g9IjcwMCIgY3k9IjM4IiByPSIxIi8+PGNpcmNsZSBjeD0iNzUwIiBjeT0iMjIiIHI9IjEuNSIvPjxjaXJjbGUgY3g9IjgwIiBjeT0iNjUiIHI9IjEiLz48Y2lyY2xlIGN4PSIxNzAiIGN5PSI1NSIgcj0iMSIvPjxjaXJjbGUgY3g9IjMxMCIgY3k9IjcwIiByPSIxIi8+PC9nPjxjaXJjbGUgY3g9IjY4MCIgY3k9IjYwIiByPSIyMCIgZmlsbD0iI2U4ZTBjMCIvPjxjaXJjbGUgY3g9IjY4OCIgY3k9IjU1IiByPSIxNiIgZmlsbD0iIzBhMWYzYSIvPjxwYXRoIGQ9Ik0zMCwyNDAgTDgwLDE5MCBMMTMwLDE4NSBMMTgwLDE5MCBMMjMwLDE4NSBMMjkwLDE4OCBMMzQwLDI0MFoiIGZpbGw9IiMwZDFlMzAiLz48cmVjdCB4PSI4MCIgeT0iMTg1IiB3aWR0aD0iMjEwIiBoZWlnaHQ9IjEyIiBmaWxsPSIjMGExODI4Ii8+PGNpcmNsZSBjeD0iMjM1IiBjeT0iMTg4IiByPSI0IiBmaWxsPSJyZ2JhKDI1NSwyMjAsMTUwLDAuNikiLz48cGF0aCBkPSJNMCwyNjAgTDQwLDIyMCBMODAsMjQwWiIgZmlsbD0iIzBhMTgyOCIvPjxwYXRoIGQ9Ik02NDAsMzAwIEw2ODAsMjUwIEw3MDAsMjYwIEw3MjAsMjQ1IEw3NTAsMjkwIEw3NjAsMzAwWiIgZmlsbD0iIzBkMWUzMCIvPjxnIGZpbGw9IiMwYTE4MjgiPjxyZWN0IHg9IjE0MCIgeT0iMjUwIiB3aWR0aD0iMjAiIGhlaWdodD0iODAiLz48cmVjdCB4PSIxNjUiIHk9IjIzNSIgd2lkdGg9IjE4IiBoZWlnaHQ9Ijk1Ii8+PHJlY3QgeD0iMTg3IiB5PSIyNTgiIHdpZHRoPSIyNSIgaGVpZ2h0PSI3MiIvPjxyZWN0IHg9IjIxNSIgeT0iMjQwIiB3aWR0aD0iMTUiIGhlaWdodD0iOTAiLz48cmVjdCB4PSIyMzMiIHk9IjI1MiIgd2lkdGg9IjIyIiBoZWlnaHQ9Ijc4Ii8+PHJlY3QgeD0iMjU4IiB5PSIyMzAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxMDAiLz48cmVjdCB4PSIyNzkiIHk9IjI0OCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjgyIi8+PHJlY3QgeD0iMzA2IiB5PSIyMzgiIHdpZHRoPSIxNiIgaGVpZ2h0PSI5MiIvPjxyZWN0IHg9IjMyNSIgeT0iMjU1IiB3aWR0aD0iMjAiIGhlaWdodD0iNzUiLz48cmVjdCB4PSIzNDgiIHk9IjI0MiIgd2lkdGg9IjE4IiBoZWlnaHQ9Ijg4Ii8+PHJlY3QgeD0iMzY5IiB5PSIyNjAiIHdpZHRoPSIyMiIgaGVpZ2h0PSI3MCIvPjxyZWN0IHg9IjM5NCIgeT0iMjQ1IiB3aWR0aD0iMTUiIGhlaWdodD0iODUiLz48cmVjdCB4PSI0MTIiIHk9IjI1MiIgd2lkdGg9IjIwIiBoZWlnaHQ9Ijc4Ii8+PHJlY3QgeD0iNDM1IiB5PSIyMzUiIHdpZHRoPSIxOCIgaGVpZ2h0PSI5NSIvPjxyZWN0IHg9IjQ1NiIgeT0iMjU4IiB3aWR0aD0iMTYiIGhlaWdodD0iNzIiLz48cmVjdCB4PSI0NzUiIHk9IjI0OCIgd2lkdGg9IjIyIiBoZWlnaHQ9IjgyIi8+PHJlY3QgeD0iNTAwIiB5PSIyNjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI3MCIvPjxyZWN0IHg9IjUyMSIgeT0iMjUwIiB3aWR0aD0iMTQiIGhlaWdodD0iODAiLz48L2c+PGcgZmlsbD0icmdiYSgyNTUsMjIwLDEyMCwwLjcpIiBvcGFjaXR5PSIwLjgiPjxyZWN0IHg9IjE0MyIgeT0iMjU1IiB3aWR0aD0iNCIgaGVpZ2h0PSIzIi8+PHJlY3QgeD0iMTUwIiB5PSIyNTUiIHdpZHRoPSI0IiBoZWlnaHQ9IjMiLz48cmVjdCB4PSIxNjgiIHk9IjI0MCIgd2lkdGg9IjQiIGhlaWdodD0iMyIvPjxyZWN0IHg9IjE3NSIgeT0iMjQwIiB3aWR0aD0iNCIgaGVpZ2h0PSIzIi8+PHJlY3QgeD0iMTY4IiB5PSIyNDgiIHdpZHRoPSI0IiBoZWlnaHQ9IjMiLz48cmVjdCB4PSIxNzUiIHk9IjI0OCIgd2lkdGg9IjQiIGhlaWdodD0iMyIvPjxyZWN0IHg9IjI2MSIgeT0iMjM1IiB3aWR0aD0iNCIgaGVpZ2h0PSIzIi8+PHJlY3QgeD0iMjY4IiB5PSIyMzUiIHdpZHRoPSI0IiBoZWlnaHQ9IjMiLz48cmVjdCB4PSIyNjEiIHk9IjI0MyIgd2lkdGg9IjQiIGhlaWdodD0iMyIvPjxyZWN0IHg9IjI2OCIgeT0iMjQzIiB3aWR0aD0iNCIgaGVpZ2h0PSIzIi8+PHJlY3QgeD0iMzI4IiB5PSIyNjAiIHdpZHRoPSI0IiBoZWlnaHQ9IjMiLz48cmVjdCB4PSIzMzUiIHk9IjI2MCIgd2lkdGg9IjQiIGhlaWdodD0iMyIvPjxyZWN0IHg9IjQzOCIgeT0iMjQwIiB3aWR0aD0iNCIgaGVpZ2h0PSIzIi8+PHJlY3QgeD0iNDQ1IiB5PSIyNDAiIHdpZHRoPSI0IiBoZWlnaHQ9IjMiLz48cmVjdCB4PSI0NzgiIHk9IjI1MyIgd2lkdGg9IjQiIGhlaWdodD0iMyIvPjxyZWN0IHg9IjQ4NSIgeT0iMjUzIiB3aWR0aD0iNCIgaGVpZ2h0PSIzIi8+PC9nPjxwYXRoIGQ9Ik0xMjAsMzMwIFEyMDAsMzIwIDMwMCwzMjggUTQwMCwzMTggNTIwLDMyNSBMNTIwLDM2MCBMMTIwLDM2MFoiIGZpbGw9IiMwZDFlMzUiLz48ZyBmaWxsPSJyZ2JhKDI1NSwyMDAsODAsMC41KSI+PGNpcmNsZSBjeD0iMTYwIiBjeT0iMzM1IiByPSIzIi8+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMzMyIiByPSIzIi8+PGNpcmNsZSBjeD0iMjQwIiBjeT0iMzM0IiByPSIzIi8+PGNpcmNsZSBjeD0iMjgwIiBjeT0iMzMxIiByPSIzIi8+PGNpcmNsZSBjeD0iMzIwIiBjeT0iMzMzIiByPSIzIi8+PGNpcmNsZSBjeD0iMzYwIiBjeT0iMzMwIiByPSIzIi8+PGNpcmNsZSBjeD0iNDAwIiBjeT0iMzMyIiByPSIzIi8+PGNpcmNsZSBjeD0iNDQwIiBjeT0iMzMxIiByPSIzIi8+PGNpcmNsZSBjeD0iNDgwIiBjeT0iMzMzIiByPSIzIi8+PC9nPjxyZWN0IHk9IjM2MCIgd2lkdGg9IjgwMCIgaGVpZ2h0PSIyODAiIGZpbGw9InVybCgjd2F0ZXJfYykiLz48ZWxsaXBzZSBjeD0iMzIwIiBjeT0iNDAwIiByeD0iMjAwIiByeT0iNDAiIGZpbGw9InVybCgjbGlnaHRfYykiLz48ZyBzdHJva2U9InJnYmEoMjU1LDIwMCwxMDAsMC4xNSkiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTE1MCwzODAgUTMyMCwzNzAgNDkwLDM4MCIvPjxwYXRoIGQ9Ik0xMzAsNDAwIFEzMjAsMzkwIDUxMCw0MDAiLz48cGF0aCBkPSJNMTEwLDQyNSBRMzIwLDQxNSA1MzAsNDI1Ii8+PC9nPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjQwIiBmaWxsPSJyZ2JhKDEwLDMwLDcwLDAuMikiLz48L3N2Zz4='); background-position: center 50%;"></div>
           <div class="exp-overlay"></div>
           <div class="exp-tile-num">05</div>
           <div class="exp-tile-content">
-            <span class="exp-tile-icon" aria-hidden="true">🏙</span>
             <h3>City &amp; Cultural Access</h3>
             <p>Tables at Cape Town's most sought-after restaurants, exclusive event tickets, private gallery tours, and introductions that can't be booked online.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── ALL SERVICES ── -->
   <section class="services" id="services">
     <div class="container">
       <div class="services-intro reveal">
@@ -1109,7 +1069,7 @@
 
       <div class="services-columns">
         <div class="service-col reveal">
-          <div class="service-col-title"><span aria-hidden="true">✈</span> Travel &amp; Transport</div>
+          <div class="service-col-title">Travel &amp; Transport</div>
           <ul class="service-list">
             <li>International &amp; domestic flight bookings</li>
             <li>Private jet &amp; helicopter charters</li>
@@ -1122,7 +1082,7 @@
           </ul>
         </div>
         <div class="service-col reveal">
-          <div class="service-col-title"><span aria-hidden="true">◈</span> Lifestyle &amp; Personal</div>
+          <div class="service-col-title">Lifestyle &amp; Personal</div>
           <ul class="service-list">
             <li>Personal shopping &amp; gift sourcing</li>
             <li>Restaurant reservations &amp; private dining</li>
@@ -1135,7 +1095,7 @@
           </ul>
         </div>
         <div class="service-col reveal">
-          <div class="service-col-title"><span aria-hidden="true">✦</span> Bespoke &amp; Exclusive</div>
+          <div class="service-col-title">Bespoke &amp; Exclusive</div>
           <ul class="service-list">
             <li>Private chef &amp; catering arrangements</li>
             <li>Wine tours &amp; cellar introductions</li>
@@ -1144,14 +1104,13 @@
             <li>Private diamond &amp; jewellery access</li>
             <li>Music &amp; entertainment sourcing</li>
             <li>Corporate hospitality &amp; events</li>
-            <li>Any bespoke request — just ask</li>
+            <li>Any bespoke request - just ask</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── PHILOSOPHY ── -->
   <section class="philosophy">
     <div class="container">
       <div class="philosophy-inner reveal">
@@ -1159,22 +1118,21 @@
         <blockquote>
           At My Concierge SA, you are not just another client. You are a valued individual, and I am committed to serving you with professionalism, integrity, and a personal touch that no app or algorithm can replicate.
         </blockquote>
-        <cite>— Sedick Achmat · Founder, My Concierge SA</cite>
+        <cite>- Sedick Achmat - Founder, My Concierge SA</cite>
       </div>
     </div>
   </section>
 
-  <!-- ── PILLARS ── -->
   <section class="pillars">
     <div class="container">
       <div class="pillars-grid">
         <div class="pillar reveal">
-          <span class="pillar-icon" aria-hidden="true">🤝</span>
+          <span class="pillar-icon" aria-hidden="true">+</span>
           <h4>Reliability</h4>
           <p>Every commitment kept. Every deadline met. Every detail confirmed before you need to ask.</p>
         </div>
         <div class="pillar reveal">
-          <span class="pillar-icon" aria-hidden="true">🔒</span>
+          <span class="pillar-icon" aria-hidden="true">*</span>
           <h4>Discretion</h4>
           <p>Your privacy is absolute. All personal information and requests are handled with complete confidentiality.</p>
         </div>
@@ -1192,14 +1150,13 @@
     </div>
   </section>
 
-  <!-- ── CONTACT ── -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact-grid">
         <div class="reveal">
           <p class="section-label">Get in Touch</p>
           <h2>Let's create something <em>extraordinary</em> together</h2>
-          <p>Tell me what you need — whether it's a single booking or an entire lifestyle managed. Every enquiry is handled personally by Sedick.</p>
+          <p>Tell me what you need - whether it's a single booking or an entire lifestyle managed. Every enquiry is handled personally by Sedick.</p>
 
           <form class="contact-form" onsubmit="handleSubmit(event)" novalidate>
             <div class="form-row">
@@ -1231,7 +1188,7 @@
             </div>
             <div class="form-field">
               <label for="message">Tell Me More</label>
-              <textarea id="message" name="message" placeholder="Describe your request — the more detail, the better I can assist you…"></textarea>
+              <textarea id="message" name="message" placeholder="Describe your request - the more detail, the better I can assist you..."></textarea>
             </div>
             <button type="submit" class="btn-primary" style="align-self:flex-start;border:none;cursor:pointer;">Send Enquiry</button>
           </form>
@@ -1255,7 +1212,7 @@
           </div>
           <div class="contact-detail">
             <div class="cd-label">Languages</div>
-            <div class="cd-value">English · Afrikaans</div>
+            <div class="cd-value">English - Afrikaans</div>
           </div>
 
           <a href="https://wa.me/27000000000" class="whatsapp-cta" target="_blank" rel="noopener noreferrer">
@@ -1270,26 +1227,23 @@
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">My Concierge SA</div>
       <div class="footer-mid">
-        Cape Town · South Africa<br>
-        <span style="opacity:0.5">© 2025 My Concierge SA · All rights reserved</span>
+        Cape Town - South Africa<br>
+        <span style="opacity:0.5">© 2025 My Concierge SA - All rights reserved</span>
       </div>
       <div class="footer-right">Sedick Achmat<br><span style="opacity:0.5">Founder &amp; Concierge Specialist</span></div>
     </div>
   </footer>
 
   <script>
-    // Nav scroll effect
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
-    // Gold rule grows with page scroll progress
     const pageRule = document.getElementById('pageRule');
     window.addEventListener('scroll', () => {
       const total = document.documentElement.scrollHeight - window.innerHeight;
@@ -1297,7 +1251,6 @@
       pageRule.style.height = Math.min(pct, 100) + '%';
     }, { passive: true });
 
-    // Reveal on scroll
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
@@ -1309,7 +1262,6 @@
     }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
 
-    // Form submit placeholder
     function handleSubmit(e) {
       e.preventDefault();
       const btn = e.target.querySelector('button[type="submit"]');
