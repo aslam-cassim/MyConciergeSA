@@ -305,7 +305,41 @@
       height: auto;
       object-fit: contain;
       opacity: 0;
-      animation: fadeInScale 1s ease 0.8s forwards;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(0,0,0,0.4) 47%, #000 54%, #000 100%);
+      mask-image: linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(0,0,0,0.4) 47%, #000 54%, #000 100%);
+      -webkit-mask-size: 100% 200%;
+      mask-size: 100% 200%;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      animation: logoDraw 2.6s cubic-bezier(.55,.06,.25,1) 0.5s both,
+                 heroLogoFloat 7s ease-in-out 3.4s infinite;
+    }
+    .hero-logo-scan {
+      position: absolute;
+      left: -4%;
+      width: 108%;
+      height: 1px;
+      top: 0;
+      opacity: 0;
+      background: linear-gradient(to right, transparent, rgba(200,169,110,0.15) 12%, var(--gold-pale) 50%, rgba(200,169,110,0.15) 88%, transparent);
+      box-shadow: 0 0 14px 2px rgba(200,169,110,0.45);
+      animation: logoScan 2.6s cubic-bezier(.55,.06,.25,1) 0.5s both;
+      pointer-events: none;
+    }
+    @keyframes logoDraw {
+      from { opacity: 0; -webkit-mask-position: 0% 0%; mask-position: 0% 0%; }
+      8%   { opacity: 1; }
+      to   { opacity: 1; -webkit-mask-position: 0% 100%; mask-position: 0% 100%; }
+    }
+    @keyframes logoScan {
+      0%   { top: 0%; opacity: 0; }
+      10%  { opacity: 1; }
+      88%  { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+    @keyframes heroLogoFloat {
+      0%, 100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 18px rgba(200,169,110,0.10)); }
+      50%      { transform: translateY(-14px) scale(1.015); filter: drop-shadow(0 0 34px rgba(200,169,110,0.28)); }
     }
     @keyframes fadeInScale {
       from {
@@ -647,6 +681,7 @@
       cursor: pointer;
     }
     .exp-tile.tall { grid-row: span 2; }
+    .exp-tile.wide { grid-column: span 2; }
 
     /* Photo background */
     .exp-photo {
@@ -1050,6 +1085,37 @@
     }
     .google-cta:hover { border-color: var(--gold); color: var(--gold-pale); }
 
+    .google-rating {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.6rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid rgba(200,169,110,0.2);
+      background: rgba(255,255,255,0.03);
+      text-decoration: none;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .google-rating:hover,
+    .google-rating:focus-visible { border-color: var(--gold); background: rgba(200,169,110,0.06); }
+    .google-rating .gr-score {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem;
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .google-rating .gr-stars { display: flex; gap: 0.18rem; }
+    .google-rating .gr-stars svg { width: 14px; height: 14px; display: block; color: var(--gold); }
+    .google-rating .gr-stars svg.is-empty { color: rgba(200,169,110,0.25); }
+    .google-rating .gr-label {
+      font-size: var(--fs-label);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-top: 0.3rem;
+    }
+
     /* FOOTER */
     footer {
       background: var(--navy);
@@ -1134,6 +1200,7 @@
       .exp-mosaic { grid-template-columns: 1fr; grid-template-rows: auto; }
       .exp-tile { min-height: 280px; }
       .exp-tile.tall { grid-row: span 1; min-height: 340px; }
+      .exp-tile.wide { grid-column: span 1; }
       .exp-cue { opacity: 1 !important; transform: none !important; }
       .services-columns { grid-template-columns: 1fr; }
       .service-col { border-right: none; border-bottom: 1px solid rgba(200,169,110,0.12); }
@@ -1196,6 +1263,7 @@
     </div>
     <div class="hero-logo-block">
       <img src="logo.png" alt="" class="hero-logo" width="560" height="478" fetchpriority="high">
+      <div class="hero-logo-scan" aria-hidden="true"></div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
       <div class="scroll-line"></div>
@@ -1260,19 +1328,9 @@
 
       <div class="exp-mosaic">
         <a class="exp-tile tall reveal" href="#contact">
-          <div class="exp-photo" data-bg="https://images.unsplash.com/photo-1669711517878-df276f9ddf22?q=80&amp;w=1000&amp;auto=format&amp;fit=crop"></div>
+          <div class="exp-photo" data-bg="https://images.unsplash.com/photo-1593351415075-3bac9f45c877?q=80&amp;w=1000&amp;auto=format&amp;fit=crop"></div>
           <div class="exp-overlay"></div>
           <div class="exp-tile-num">01</div>
-          <div class="exp-tile-content">
-            <h3>Winelands &amp; Private Cellars</h3>
-            <p>Exclusive tastings at legendary estates, behind-the-scenes cellar access, and bespoke blending sessions. I arrange direct relationships with winemakers and reserve the finest vintages before release.</p>
-            <span class="exp-cue" aria-hidden="true">Ask Sedick &rarr;</span>
-          </div>
-        </a>
-        <a class="exp-tile reveal" href="#contact">
-          <div class="exp-photo" data-bg="https://images.unsplash.com/photo-1593351415075-3bac9f45c877?q=80&amp;w=800&amp;auto=format&amp;fit=crop"></div>
-          <div class="exp-overlay"></div>
-          <div class="exp-tile-num">02</div>
           <div class="exp-tile-content">
             <h3>Ocean &amp; Marine Experiences</h3>
             <p>Private yacht charters, exclusive diving sites, and prime fishing grounds off the Cape.</p>
@@ -1282,7 +1340,7 @@
         <a class="exp-tile reveal" href="#contact">
           <div class="exp-photo" data-bg="https://images.unsplash.com/photo-1742857307648-6dfa1aeac640?q=80&amp;w=800&amp;auto=format&amp;fit=crop"></div>
           <div class="exp-overlay"></div>
-          <div class="exp-tile-num">03</div>
+          <div class="exp-tile-num">02</div>
           <div class="exp-tile-content">
             <h3>Helicopter &amp; Air Charters</h3>
             <p>Scenic flights over Cape Town, private helicopter charters to remote locations, and luxury jet access.</p>
@@ -1292,17 +1350,17 @@
         <a class="exp-tile reveal" href="#contact">
           <div class="exp-photo" data-bg="https://images.unsplash.com/photo-1709402606682-400133d92ab2?q=80&amp;w=800&amp;auto=format&amp;fit=crop"></div>
           <div class="exp-overlay"></div>
-          <div class="exp-tile-num">04</div>
+          <div class="exp-tile-num">03</div>
           <div class="exp-tile-content">
             <h3>Safari &amp; Wildlife</h3>
             <p>Bespoke Big Five experiences from the Kruger to exclusive private reserves. Every transfer and lodge personally arranged.</p>
             <span class="exp-cue" aria-hidden="true">Ask Sedick &rarr;</span>
           </div>
         </a>
-        <a class="exp-tile reveal" href="#contact">
-          <div class="exp-photo" data-bg="https://images.unsplash.com/photo-1663414278309-e3208f78eedc?q=80&amp;w=800&amp;auto=format&amp;fit=crop"></div>
+        <a class="exp-tile wide reveal" href="#contact">
+          <div class="exp-photo" data-bg="https://images.unsplash.com/photo-1663414278309-e3208f78eedc?q=80&amp;w=1000&amp;auto=format&amp;fit=crop"></div>
           <div class="exp-overlay"></div>
-          <div class="exp-tile-num">05</div>
+          <div class="exp-tile-num">04</div>
           <div class="exp-tile-content">
             <h3>City &amp; Cultural Access</h3>
             <p>Tables at Cape Town's most sought-after restaurants, exclusive event tickets, private gallery tours, and introductions that can't be booked online.</p>
@@ -1497,6 +1555,14 @@
             </div>
           </a>
           <a href="https://share.google/S40hfdszGlaLD7ovL" class="google-cta" target="_blank" rel="noopener noreferrer">View our Google Business Profile &amp; reviews &rarr;</a>
+
+          <a href="https://share.google/S40hfdszGlaLD7ovL" class="google-rating" id="googleRating" target="_blank" rel="noopener noreferrer">
+            <div class="gr-score" id="grScore">5.0</div>
+            <div>
+              <div class="gr-stars" id="grStars" aria-hidden="true"></div>
+              <div class="gr-label" id="grLabel">Rated on Google</div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -1591,6 +1657,38 @@
         }
       });
     });
+
+    // Google rating — reads reviews.json so the figures can be refreshed
+    // without touching this file (see reviews.json for how to automate it).
+    (function initGoogleRating() {
+      const starPath = 'M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01z';
+      function paint(rating, count) {
+        const stars = document.getElementById('grStars');
+        const score = document.getElementById('grScore');
+        const label = document.getElementById('grLabel');
+        if (!stars || !score || !label) return;
+        score.textContent = rating.toFixed(1);
+        stars.innerHTML = '';
+        for (let i = 0; i < 5; i++) {
+          const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          svg.setAttribute('viewBox', '0 0 24 24');
+          svg.setAttribute('fill', 'currentColor');
+          if (i >= Math.round(rating)) svg.setAttribute('class', 'is-empty');
+          const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          p.setAttribute('d', starPath);
+          svg.appendChild(p);
+          stars.appendChild(svg);
+        }
+        label.textContent = count > 0 ? count + ' Google reviews' : 'Rated on Google';
+        const el = document.getElementById('googleRating');
+        if (el) el.setAttribute('aria-label', 'Rated ' + rating.toFixed(1) + ' out of 5 on Google' + (count > 0 ? ' from ' + count + ' reviews' : ''));
+      }
+      paint(5, 0);
+      fetch('reviews.json', { cache: 'no-store' })
+        .then(r => r.ok ? r.json() : null)
+        .then(d => { if (d && typeof d.rating === 'number') paint(d.rating, typeof d.reviewCount === 'number' ? d.reviewCount : 0); })
+        .catch(() => {});
+    })();
 
     async function handleSubmit(e) {
       e.preventDefault();

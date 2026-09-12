@@ -1,0 +1,7 @@
+{
+  "_note": "Live Google rating for My Concierge SA. Replace these values from the Google Places API (Place Details -> rating, userRatingCount) or by hand. The site reads this file on every load, so updating it updates the site.",
+  "placeId": "",
+  "rating": null,
+  "reviewCount": null,
+  "updated": ""
+}
