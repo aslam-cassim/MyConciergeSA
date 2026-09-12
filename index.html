@@ -61,7 +61,7 @@
       --fs-label:  0.72rem;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
 
     body {
       background: var(--dark);
@@ -170,6 +170,7 @@
     .hero {
       position: relative;
       height: 100vh;
+      height: 100dvh;
       min-height: 680px;
       display: flex;
       align-items: center;
@@ -1180,6 +1181,7 @@
         position: fixed;
         top: 0; right: 0;
         height: 100vh;
+        height: 100dvh;
         width: min(78vw, 320px);
         flex-direction: column;
         justify-content: center;
