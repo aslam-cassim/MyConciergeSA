@@ -7,7 +7,8 @@
     "serve": "python -m http.server 8080",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
-    "test:report": "playwright show-report"
+    "test:report": "playwright show-report",
+    "deploy": "node scripts/deploy.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
   },
   "homepage": "https://github.com/aslam-cassim/MyConciergeSA#readme",
   "devDependencies": {
-    "@playwright/test": "^1.62.1"
+    "@playwright/test": "^1.62.1",
+    "basic-ftp": "^6.2.1",
+    "dotenv": "^17.4.2"
   }
 }

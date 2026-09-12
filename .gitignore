@@ -1,5 +1,9 @@
 dev-archive/
 
+# secrets
+.env
+.mcp.json
+
 # dependencies
 node_modules/
 
