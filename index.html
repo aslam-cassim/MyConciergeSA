@@ -1706,7 +1706,10 @@
           headers: { 'Accept': 'application/json' },
           body: new FormData(form)
         });
-        if (!res.ok) throw new Error('Request failed');
+        const data = await res.json().catch(() => null);
+        if (!res.ok || !data || String(data.success) === 'false') {
+          throw new Error(data?.message || 'Request failed');
+        }
         form.reset();
         btn.textContent = 'Enquiry sent';
         status.textContent = 'Thank you — Sedick will reply to you personally, usually within one business day. For anything urgent, message +27 74 537 6626 on WhatsApp.';
