@@ -53,6 +53,53 @@ test.describe('No horizontal scroll', () => {
   });
 });
 
+test.describe('Grid items never overflow their grid container', () => {
+  // Regression coverage for the "text cut off under About / 35+" bug: a bare
+  // `1fr` grid track refuses to shrink below its content's natural minimum
+  // width (the classic CSS Grid "min-width: auto" gotcha), so .meet-grid's
+  // track — and the nested .stat-row's — silently rendered ~86px wider than
+  // the grid container itself at mobile widths, and the overflowing content
+  // got clipped by overflow-x: hidden. The grid container's own box stays
+  // correctly sized (it's laid out by its parent as normal); it's the
+  // *items inside it* that spill past its right edge. Note this is NOT
+  // caught by a page-level scrollWidth check: once overflow-x: hidden is set
+  // on <html>, Chromium reports scrollWidth clipped to the viewport
+  // regardless of internal content overflow.
+  for (const { name, width, height } of WIDTHS) {
+    test(`no grid item overflows its grid container on ${name} (${width}x${height})`, async ({ page }) => {
+      await page.setViewportSize({ width, height });
+      await stubExternalAssets(page);
+      await page.goto('/');
+
+      const offenders = await page.evaluate(() => {
+        const bad = [];
+        document.querySelectorAll('body *').forEach((container) => {
+          const display = getComputedStyle(container).display;
+          if (display !== 'grid' && display !== 'inline-grid') return;
+          const containerRect = container.getBoundingClientRect();
+          Array.from(container.children).forEach((child) => {
+            const r = child.getBoundingClientRect();
+            if (r.width === 0 && r.height === 0) return; // not rendered
+            if (r.right > containerRect.right + 1 || r.left < containerRect.left - 1) {
+              bad.push({
+                container: container.className || container.tagName,
+                child: child.className || child.tagName,
+                childRight: Math.round(r.right),
+                childLeft: Math.round(r.left),
+                containerRight: Math.round(containerRect.right),
+                containerLeft: Math.round(containerRect.left),
+              });
+            }
+          });
+        });
+        return bad;
+      });
+
+      expect(offenders).toEqual([]);
+    });
+  }
+});
+
 test.describe('Hero fills the real viewport height', () => {
   test('hero height tracks viewport height (not a fixed pixel value)', async ({ page }) => {
     await stubExternalAssets(page);
