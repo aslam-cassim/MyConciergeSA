@@ -108,13 +108,13 @@ test.describe('Hero fills the real viewport height', () => {
     await page.goto('/');
     const shortHeroHeight = await page.locator('.hero').evaluate((el) => el.getBoundingClientRect().height);
 
-    await page.setViewportSize({ width: 390, height: 900 });
+    await page.setViewportSize({ width: 390, height: 1100 });
     await page.reload();
     const tallHeroHeight = await page.locator('.hero').evaluate((el) => el.getBoundingClientRect().height);
 
     // A viewport-relative unit (vh/dvh) makes the hero grow with the
     // viewport; a static px value or a stale cached vh would not.
     expect(tallHeroHeight).toBeGreaterThan(shortHeroHeight);
-    expect(shortHeroHeight).toBeGreaterThanOrEqual(680); // the CSS min-height floor
+    expect(shortHeroHeight).toBeGreaterThanOrEqual(900); // the CSS min-height floor at this width
   });
 });

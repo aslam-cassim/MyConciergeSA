@@ -360,9 +360,15 @@
     @media (max-width: 960px) {
       .hero {
         flex-direction: column;
-        justify-content: center;
-        padding: 0 2rem;
-        gap: 2rem;
+        /* Anchored to the top with a fixed offset, not centered: the fixed
+           nav overlays the hero, and on short viewports the stacked content
+           (heading + logo) is taller than the hero box, which made centering
+           push the eyebrow/heading up behind the nav. A fixed top offset
+           guarantees clearance regardless of viewport height. */
+        justify-content: flex-start;
+        padding: 6.5rem 2rem 0;
+        gap: 1.5rem;
+        min-height: 800px;
       }
       .hero-content {
         max-width: 100%;
@@ -378,8 +384,8 @@
 
     @media (max-width: 600px) {
       .hero {
-        padding: 0 1.5rem;
-        gap: 1.5rem;
+        padding: 6.5rem 1.5rem 0;
+        gap: 1.25rem;
       }
       .hero-logo-block {
         max-width: 220px;
@@ -388,10 +394,11 @@
 
     @media (max-width: 400px) {
       .hero {
-        padding: 0 1rem;
+        padding: 6.5rem 1rem 0;
+        min-height: 900px;
       }
       .hero-logo-block {
-        max-width: 160px;
+        max-width: 140px;
       }
     }
 
